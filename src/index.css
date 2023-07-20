@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  display: flex;
+  padding: 30px;
+  justify-content: center; /* horizontal alignmetn */
+  /* align-content: center; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game {
+  width: 560px;
+  height: 560px;
+  display: flex;
+  /* if flex-wrap was nowrap, then everything would be fitted into single line, flex wrap being wrap will utilise the space and different lines for proper display */
+  flex-wrap: wrap;
+}
+
+.game img {
+  width: 70px;
+  height: 70px;
+  /* we are giving 70 px because 560/70 i.e, the total height/width by single height/width will give 8
+  and 8x8 is our board size */
 }

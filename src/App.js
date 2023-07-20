@@ -30,7 +30,22 @@ const App = () => {
     createBoard();
   }, []);
   console.log(currentColorArrangement);
-  return;
+
+  // return visual components
+  return (
+    <div className="app">
+      <div className="game">
+        {/* now, we will create each square of the board */}
+        {/* we will use map function to map each color/element of the currentColorArrangement array into each square */}
+        {/* for writing functions/js in react inside the visual/html portion, we use {} brackets */}
+        {/* for writing html/jsx components, we use () bracket */}
+        {currentColorArrangement.map((currentColor, index) => (
+          // eslint-disable-next-line jsx-a11y/alt-text
+          <img key={index} style={{ backgroundColor: currentColor }} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default App;
