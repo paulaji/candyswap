@@ -6,6 +6,11 @@ const candyColors = ["red", "blue", "orange", "green", "purple", "yellow"];
 const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
 
+  // to check for column of three
+  const checkForColumnOfThree = () => {
+    return;
+  };
+
   // function to create the board
   const createBoard = () => {
     // declaring array to store randomColors
@@ -44,7 +49,7 @@ const App = () => {
           <img
             key={index}
             style={{ backgroundColor: currentColor }}
-            alt={"candyColor"} // alt is for alternative and since we don't have the images and we are using colors as alt, we just specified it!
+            // alt={currentColor} // alt is for alternative and since we don't have the images and we are using colors as alt, we just specified it!
           />
         ))}
       </div>
