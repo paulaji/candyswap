@@ -41,7 +41,11 @@ const App = () => {
         {/* for writing html/jsx components, we use () bracket */}
         {currentColorArrangement.map((currentColor, index) => (
           // eslint-disable-next-line jsx-a11y/alt-text
-          <img key={index} style={{ backgroundColor: currentColor }} />
+          <img
+            key={index}
+            style={{ backgroundColor: currentColor }}
+            alt={"candyColor"} // alt is for alternative and since we don't have the images and we are using colors as alt, we just specified it!
+          />
         ))}
       </div>
     </div>
